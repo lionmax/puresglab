@@ -1,0 +1,10 @@
+- name: Create clone volume from Snapshot in FlashArray
+  hosts: localhost
+  gather_facts: no
+  tasks:
+  - name: create clone from snapshot volume llam01
+    purefa_snap:
+      name: llam01
+      suffix: snap
+      target: llam01_clone
+      state: copy

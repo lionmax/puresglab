@@ -1,0 +1,13 @@
+- name: Create new protection group in FlashArray
+  hosts: localhost
+  gather_facts: no
+  tasks:
+  - name: create new pg '{{ pg_name }}'
+    purefa_pg:
+      pgroup: '{{ pg_name }}'
+      volume:
+        - '{{ vol01 }}'
+        - '{{ vol02 }}'
+      enabled: '{{ answer }}'
+      fa_url: '{{ fa_url }}'
+      api_token: '{{ api_token }}'

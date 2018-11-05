@@ -1,0 +1,10 @@
+- name: Delete Protection Group Snapshotp in FlashArray
+  hosts: localhost
+  gather_facts: no
+  tasks:
+  - name: delete snapshot of pg llampg
+    purefa_pgsnap:
+      name: llampg
+      suffix: snap
+      eradicate: yes
+      state: absent

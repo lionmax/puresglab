@@ -1,0 +1,10 @@
+- name: Delete host in FlashArray
+  hosts: localhost
+  gather_facts: no
+  tasks:
+  - name: delete host '{{ host_name }}'
+    purefa_host:
+      host: '{{ host_name }}'
+      fa_url: '{{ fa_url }}'
+      api_token: '{{ api_token }}'
+      state: absent
