@@ -1,0 +1,9 @@
+- name: Delete Snapshot in FlashArray
+  hosts: localhost
+  gather_facts: no
+  tasks:
+  - name: delete snapshot llam01.snap
+    purefa_snap:
+      name: llam01
+      suffix: snap
+      state: absent
