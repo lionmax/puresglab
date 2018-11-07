@@ -3,7 +3,7 @@
   gather_facts: no
   tasks:
   - name: create filesystem '{{ fs_name }}' of size '{{ size }}'
-    purefa_volume:
+    purefb_fs:
       name: '{{ fs_name }}'
       size: '{{ size }}'
       fb_url: '{{ fb_url }}'
