@@ -1,0 +1,11 @@
+- name: Snapshot filsystem in FlashBlade
+  hosts: localhost
+  gather_facts: no
+  tasks:
+  - name: snapshot filesystem '{{ fs_name }}'
+    purefb_snap:
+      name: '{{ fs_name }}'
+      suffix: '{{ suffix }}'
+      fb_url: '{{ fb_url }}'
+      api_token: '{{ api_token }}'
+      state: present

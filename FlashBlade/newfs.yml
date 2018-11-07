@@ -1,0 +1,11 @@
+- name: Create new filesystem in FlashBlade
+  hosts: localhost
+  gather_facts: no
+  tasks:
+  - name: create filesystem '{{ fs_name }}' of size '{{ size }}'
+    purefa_volume:
+      name: '{{ fs_name }}'
+      size: '{{ size }}'
+      fb_url: '{{ fb_url }}'
+      api_token: '{{ api_token }}'
+      state: present
