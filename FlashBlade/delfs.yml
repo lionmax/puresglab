@@ -2,7 +2,7 @@
   hosts: localhost
   gather_facts: no
   tasks:
-  - name: delete volume '{{ fs_name }}'
+  - name: delete filesystem '{{ fs_name }}'
     purefb_fs:
       name: '{{ fs_name }}'
       fb_url: '{{ fb_url }}'
