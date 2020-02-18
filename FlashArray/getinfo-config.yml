@@ -1,0 +1,12 @@
+- name: Collect Config Info from FlashArray
+  hosts: localhost
+  gather_facts: no
+  tasks:
+  - name: collect config information
+    purefa_info:
+      fa_url: '{{ fa_url }}'
+      api_token: '{{ api_token }}'
+     register: array_info
+  - name: show config information
+    debug:
+      msg: "{{ array_info['purefa_info']['config'] }}" 

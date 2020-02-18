@@ -1,0 +1,12 @@
+- name: Collect Default Info from FlashArray
+  hosts: localhost
+  gather_facts: no
+  tasks:
+  - name: collect default set of information
+    purefa_info:
+      fa_url: '{{ fa_url }}'
+      api_token: '{{ api_token }}'
+     register: array_info
+  - name: show default information
+    debug:
+      msg: "{{ array_info['purefa_info']['default'] }}" 

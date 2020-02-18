@@ -1,0 +1,12 @@
+- name: Collect All Info from FlashArray
+  hosts: localhost
+  gather_facts: no
+  tasks:
+  - name: collect all information
+    purefa_info:
+      fa_url: '{{ fa_url }}'
+      api_token: '{{ api_token }}'
+     register: array_info
+  - name: show all information
+    debug:
+      msg: "{{ array_info['purefa_info'] }}" 
