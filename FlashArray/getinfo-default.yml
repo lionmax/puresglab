@@ -6,7 +6,7 @@
     purefa_info:
       fa_url: '{{ fa_url }}'
       api_token: '{{ api_token }}'
-     register: array_info
+    register: array_info
   - name: show default information
     debug:
       msg: "{{ array_info['purefa_info']['default'] }}" 
