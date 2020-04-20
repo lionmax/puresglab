@@ -2,7 +2,7 @@
   hosts: localhost
   gather_facts: no
   tasks:
-  - name: create new volume '{{ vol_name }}' of size '{{ size }}'
+  - name: create new volume "{{ vol_name }}" of size "{{ size }}"
     purestorage.flasharry.purefa_volume:
       name: '{{ vol_name }}'
       size: '{{ size }}'
