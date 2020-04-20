@@ -3,7 +3,7 @@
   gather_facts: no
   tasks:
   - name: create new volume '{{ vol_name }}' of size '{{ size }}'
-    purefa_volume:
+    purestorage.flasharry.purefa_volume:
       name: '{{ vol_name }}'
       size: '{{ size }}'
       bw_qos: '{{ bw }}'
