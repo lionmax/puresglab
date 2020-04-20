@@ -9,7 +9,7 @@
       name: '{{ vol_name }}'
       size: '{{ size }}'
       bw_qos: '{{ bw }}'
-      iops_qos '{{ iops }}'
+      iops_qos: '{{ iops }}'
       fa_url: '{{ fa_url }}'
       api_token: '{{ api_token }}'
       state: present
