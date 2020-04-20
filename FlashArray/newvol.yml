@@ -6,7 +6,7 @@
     purefa_volume:
       name: '{{ vol_name }}'
       size: '{{ size }}'
-      qos: '{{ bandwidth }}'
+      qos: '{{ qosvalue }}'
       fa_url: '{{ fa_url }}'
       api_token: '{{ api_token }}'
       state: present
