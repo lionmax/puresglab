@@ -1,5 +1,7 @@
 - name: Create new volume in FlashArray
   hosts: localhost
+  collections:
+  - purestorage.flasharray
   gather_facts: no
   tasks:
   - name: create new volume '{{ vol_name }}' of size '{{ size }}'
