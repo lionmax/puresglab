@@ -1,9 +1,0 @@
-- name: Snapshot Protection Group in FlashArray
-  hosts: localhost
-  gather_facts: no
-  tasks:
-  - name: snapshot pg llampg
-    purefa_pgsnap:
-      name: llampg
-      suffix: snap1
-      state: present
