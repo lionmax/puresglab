@@ -4,6 +4,8 @@
   tasks:
   - name: collect config information
     purefa_info:
+      gather_subset:
+        - config
       fa_url: '{{ fa_url }}'
       api_token: '{{ api_token }}'
      register: array_info
