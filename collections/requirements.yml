@@ -1,0 +1,6 @@
+collections:
+  - name: purestorage.flasharray
+    source: https://galaxy.ansible.com
+
+  - name: purestorage.flashblade
+    source: https://galaxy.ansible.com
