@@ -1,5 +1,7 @@
 - name: Collect All Info from FlashArray
   hosts: localhost
+  collections:
+  - purestorage.flasharray
   gather_facts: no
   tasks:
   - name: collect all information
