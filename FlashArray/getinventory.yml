@@ -1,13 +1,13 @@
-- name: Collect All Info from FlashArray
+- name: Collect Inventory from FlashArray
   hosts: localhost
   collections:
   - purestorage.flasharray
   gather_facts: no
   tasks:
-  - name: collect all information
+  - name: collect inventory information
     purefa_inventory:
       fa_url: '{{ fa_url }}'
       api_token: '{{ api_token }}'
-  - name: show default information
+  - name: show inventory information
     debug:
       msg: "{{ array_info['purefa_info'] }}" 
